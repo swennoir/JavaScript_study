@@ -1,31 +1,28 @@
-const address = {
-  country: "South Korea",
-  city: "Seoul",
-  street: "Gangnam",
-  str_num: 141,
-  postcode: "00510"
-};
-
-//객체 비구조화, object destructuring
-const country = "America";
-const city = "LA";
-//alias
-const { country: nextcountry, city: nextcity } = address;
-console.log(`${nextcountry} ${nextcity}`);
-
-//배열 비구조화, array destructuring
-const [firstcountry, secondcountry, thirdcountry] = [
-  "Japan",
-  "Korea",
-  "America"
+const defaultValue = [
+  {
+    year: 2000,
+    data: "크리스마스"
+  },
+  {
+    year: 2001,
+    data: "롤리팝"
+  },
+  {
+    year: 2010,
+    data: "안드로이드"
+  },
+  {
+    year: 2015,
+    data: "리엑트네이티브"
+  },
+  {
+    year: 2018,
+    data: "곧 2019"
+  }
 ];
 
-console.log(secondcountry);
-
-//객체 리터럴, object literal
-function getAddress(country, city, street) {
-  const myAddress = { country, city, street };
-  console.log(myAddress);
+function printYears(years = defaultValue) {
+  console.log(years);
 }
 
-getAddress("Japan", "Osaka", "street");
+printYears();
